@@ -1,0 +1,21 @@
+<h3>Update Candidates</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name"> Name</label>
+      <input type="text" class="form-control" id="tName" required [(ngModel)]="candidates.name" name="tName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">position</label>
+      <input type="text" class="form-control" id="pos" required [(ngModel)]="candidates.position" name="pos">
+    </div>
+
+    <div class="form-group">
+      <label for="name">candidate_code</label>
+      <input type="text" class="form-control" id="can" required [(ngModel)]="candidates.candicode" name="can">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

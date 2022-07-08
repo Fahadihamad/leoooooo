@@ -1,0 +1,32 @@
+<h1>Login in to continue</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+            
+                <form #loginform="ngForm" (ngSubmit) = "loginUser()">
+                    <div class="form-group">
+                      <label for="inputregNO">UserID/Registration number</label>
+                      <input type="text" class="form-control" name="regNO" aria-describedby="textHelp" placeholder="Enter Registration number/userID" [(ngModel)]="user.regNO" required>
+                      <small id="textHelp" class="form-text text-muted">please enter your school registration number.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="InputPassword1">Password</label>
+                      <input type="password" class="form-control" name="current-password" id="current-password" placeholder="Enter your password" [(ngModel)]="user.password" #password="ngModel" required>
+                      <small class=" text-danger">{{msg}}</small>
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">
+                          Agree to terms
+                      </label>
+                      
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                  </form>
+                  <a style="color: whitesmoke;margin-top: 20px;" routerLink="/signin">New user? click to sign up</a> 
+            </div>
+        </div>
+    </div>
+    
+        </div>

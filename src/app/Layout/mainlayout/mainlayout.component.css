@@ -1,0 +1,35 @@
+.sidenav-container {
+  height: 100%;
+  width: 100%;
+  background-image:url(mada.png);
+
+}
+
+.sidenav {
+  width: 280px;
+  margin: 0%;
+  background-color: wheat;
+}
+
+.sidenav .mat-toolbar {
+  /*background: inherit;*/
+  margin: 0%;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.main-contant{
+  padding:0px;
+  margin: 0%;
+  
+}
+a{
+  color:blue;
+}
+span{
+  text-align: left;
+}
+

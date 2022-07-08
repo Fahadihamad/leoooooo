@@ -1,0 +1,33 @@
+<h1>welcome</h1>
+
+<div class="container">   
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Candidates List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>position</th>
+            <th>candidate_code</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let candidates of candidates | async">
+            <td>{{candidates.name}}</td>
+            <td>{{candidates.position}}</td>
+            <td>{{candidates.candicode}}</td>
+            <td>{{candidates.active}}</td>
+            <td><button (click)="deleteCandidates(candidates.id)" class="btn btn-danger">Delete</button>
+                <button (click)="candidatesDetails(candidates.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

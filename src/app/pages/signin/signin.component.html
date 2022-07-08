@@ -1,0 +1,75 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>sign up</h1>
+                    <h3>Register to use our services</h3>
+                </div>
+            
+                <form #Registerform="ngForm" (ngSubmit)="signinUser()">
+                  <small class="text-danger">{{msg}}</small>
+                    <div class="mb-3">
+                      <label for="fname">first name</label>
+                      <input type="text" class="form-control" id="inputfname" name="inputfname" aria-describedby="textHelp" placeholder="Enter your first name" [(ngModel)]="user.first_name" #text="ngModel" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lname">last name</label>
+                        <input type="text" class="form-control" id="inputlastname" name="inputlastname" aria-describedby="textHelp" placeholder="Enter yoor last name" [(ngModel)]="user.last_name" #text="ngModel" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="regNO">registration number</label>
+                        <input type="text" class="form-control" id="regNO" name="regNO" aria-describedby="textHelp" placeholder="Enter your regNO" [(ngModel)]="user.regNO" #text="ngModel" required>
+                  
+                      </div>
+                      <div class="mb-3">
+                        <label for="emmm">email address</label>
+                        <input type="email" class="form-control" id="email_id" name="email_id" aria-describedby="emailHelp" placeholder="Enter your email" [(ngModel)]="user.email_id" #email="ngModel"
+                        >
+                    
+                      </div>
+                      <div class="mb-3"> 
+                        <label for="school">choose your school</label>
+                        <select class="custom-select custom-select-lg" name="select" [(ngModel)]="user.campus" #text="ngModel" required>
+                            <option selected>select school</option>
+                            <option value="1">TUNGUU</option>
+                            <option value="2">MARUHUBI</option>
+                            <option value="3">CHWAKA</option>
+                    </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="gender">select your gender</label><br>
+                        <input type="radio" value="male" name="gender" > Male
+                        <input type="radio" value="female" name="gender"> Female
+                      </div>
+                      
+                <div class="mb-3">
+                      <label for="pwd"> create password</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" [(ngModel)]="user.password" #password="ngModel" required
+                      [class.is-invalid]="password.invalid && password.touched"
+                      >
+                      <small class="text.danger" [class.d-none]="password.valid || password.untouched">password is required field</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="pwd"> confirm your password</label>
+                        <input type="password" class="form-control" id="cpassword" name="cpassword" placeholder="Enter password again" #cpassword="ngModel" (ngModel)="user.password" required
+                        [class.is-invalid]="cpassword.invalid && cpassword.touched"
+                        >
+                        <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">confirm password must match with created password</small>
+                      </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">
+                          Agree to terms
+                      </label>
+                      
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">sign up</button>
+                  </form>
+                  <a style="color: whitesmoke;margin-top: 20px;" routerLink="/login">Already regestered? click to Login</a> 
+                   </div>
+                   </div> 
+                   </div>
+    
+                    </div>

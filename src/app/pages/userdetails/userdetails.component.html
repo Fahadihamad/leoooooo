@@ -1,0 +1,18 @@
+<h2>Candidate Details</h2> 
+
+<hr/>
+<div *ngIf="candidates">
+  <div>
+    <label><b>Name: </b></label> {{candidates.name}}
+  </div>
+  <div>
+    <label><b>position: </b></label> {{candidates.position}}
+  </div>
+  <div>
+    <label><b>candidate_code: </b></label> {{candidates.candicode}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Candidates List</button><br>

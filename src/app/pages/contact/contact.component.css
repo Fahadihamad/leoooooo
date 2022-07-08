@@ -1,0 +1,44 @@
+h1{
+    text-align: center;
+    color:white;
+    margin-top: 20px;
+}
+p{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+.conatactus{
+    margin-top: 200px;
+    color:white;
+}
+.folter{
+
+    background-color:rgba(91,53,154,.9);
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    margin-top: 30px;
+    color: aliceblue;
+    
+    
+}
+#folter2{
+    background-color:black;
+    color: aliceblue;
+    margin-top: 0%;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 0%;
+    margin-right: 0%;
+
+}
+#act{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+}
